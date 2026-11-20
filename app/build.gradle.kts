@@ -22,20 +22,14 @@ android {
         configureEach {
             //应用名
             //app name
-            resValue("string","app_name","Turnip 24.3.2")
-            //包名后缀
-            //package name Suffix
-            applicationIdSuffix = ".turnip2432"
+            resValue("string","app_name","PanVK 26.3")
+            //包名后缀（每个驱动唯一，多个插件可共存）
+            //package name Suffix (unique per driver so multiple plugins can coexist)
+            applicationIdSuffix = ".panvk263"
 
-            //驱动在启动器内显示的名称
-            //The name displayed by the driver in the launcher
-            manifestPlaceholders["driver"] = "Turnip 24.3.2"
-            //驱动库文件名（须存在于 src/main/jniLibs/<abi>/ 下）
-            //Driver library file name (must exist under src/main/jniLibs/<abi>/)
-            manifestPlaceholders["driverLib"] = "libvulkan_freedreno.so"
-            //驱动适配的 GPU 家族：adreno / mali / any
-            //The GPU family the driver targets: adreno / mali / any
-            manifestPlaceholders["driverGpu"] = "adreno"
+            manifestPlaceholders["driver"] = "PanVK 26.3"
+            manifestPlaceholders["driverLib"] = "libvulkan_panfrost.so"
+            manifestPlaceholders["driverGpu"] = "mali"
         }
     }
     compileOptions {
